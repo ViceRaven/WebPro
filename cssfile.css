@@ -1,0 +1,74 @@
+/* Reset padding and margin, set default font */
+* { 
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Style the unordered lists */
+ul {
+    list-style: none; 
+    background: #00ddc0; /* Set background color to green */
+}
+
+/* Style list items in the unordered list */
+ul li { /*This class name means all list items inside the unordered list (CONTROLS THE WORDS IN THE BANNER)*/
+    display: inline-block; /* Display items side-by-side */
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-top: 18px;
+    margin-bottom: 17px; /* Space below each item */
+}
+
+/* Style anchor tags inside list items */
+ul li a {/*This class name means all a tags inside the list items*/
+    display: block; /* Make anchor tags block-level */
+    position: 20px 25px; /* Add space inside the anchor tag */
+    color: #fafafa; 
+    text-decoration: none; 
+    text-align: left; 
+    font-size: 18px; 
+    white-space: nowrap;/* A way to prevent the dropdown text from starting a new line */
+}
+
+/* Style dropdown list items */
+ul li ul.dropdown li {/*This class name means all list items inside dropdown class*/
+    display: block; /* Ensure dropdown items are block-level */
+    
+}
+
+/* Style the dropdown menu */
+ul li ul.dropdown { /*This class name means dropdown class*/
+    width: 300%; /* Set dropdown width */
+    background: #fefefe; /* Set background color */
+    position: absolute; /* Position dropdown absolutely */
+    z-index: 999; /* Ensure dropdown is on top */
+    display: none; /* Hide dropdown by default */
+    
+}
+
+/* Change background color on hover of anchor tags */
+/* Change background color on hover of anchor tags */
+ul li a:hover {
+    background: #0c0c0c; /* Dark blue background on hover */
+    opacity: 50%;
+    padding: 5px 5px; /* Ensure padding matches the non-hover state */
+}
+ul li a:focus {
+    color: #ff0000 ; /* Change text color to red when focused */
+}
+/* Show the dropdown menu on hover of the parent list item */
+ul li:hover ul.dropdown { /*This class name means dropdown class items when hovered over listed item*/
+    display: block; /* Show dropdown menu */
+}
+
+
+.component-box{
+    display: block;
+    width: 150%;
+    margin-top: 150px;
+    color: #b40909;
+    background: #040202;
+    margin: 200px;
+}
+
