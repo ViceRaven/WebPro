@@ -18,19 +18,23 @@ ul li { /*This class name means all list items inside the unordered list (CONTRO
     padding-right: 10px;
     padding-top: 18px;
     margin-bottom: 17px; /* Space below each item */
+    color: #000000; /* Set text color to BLACK */
 }
 
 /* Style anchor tags inside list items */
 ul li a {/*This class name means all a tags inside the list items*/
     display: block; /* Make anchor tags block-level */
     position: 20px 25px; /* Add space inside the anchor tag */
-    color: #fafafa; 
+    color: #000000; 
     text-decoration: none; 
     text-align: left; 
     font-size: 18px; 
     white-space: nowrap;/* A way to prevent the dropdown text from starting a new line */
 }
 
+.subject{
+    color: #ffffff;
+}
 /* Style dropdown list items */
 ul li ul.dropdown li {/*This class name means all list items inside dropdown class*/
     display: block; /* Ensure dropdown items are block-level */
@@ -38,13 +42,12 @@ ul li ul.dropdown li {/*This class name means all list items inside dropdown cla
 }
 
 /* Style the dropdown menu */
+/* Style the dropdown menu */
 ul li ul.dropdown { /*This class name means dropdown class*/
     width: 300%; /* Set dropdown width */
     background: #fefefe; /* Set background color */
     position: absolute; /* Position dropdown absolutely */
-    z-index: 999; /* Ensure dropdown is on top */
     display: none; /* Hide dropdown by default */
-    
 }
 
 /* Change background color on hover of anchor tags */
@@ -54,9 +57,7 @@ ul li a:hover {
     opacity: 50%;
     padding: 5px 5px; /* Ensure padding matches the non-hover state */
 }
-ul li a:focus {
-    color: #ff0000 ; /* Change text color to red when focused */
-}
+
 /* Show the dropdown menu on hover of the parent list item */
 ul li:hover ul.dropdown { /*This class name means dropdown class items when hovered over listed item*/
     display: block; /* Show dropdown menu */
@@ -65,10 +66,42 @@ ul li:hover ul.dropdown { /*This class name means dropdown class items when hove
 
 .component-box{
     display: block;
-    width: 150%;
-    margin-top: 150px;
-    color: #b40909;
-    background: #040202;
-    margin: 200px;
+    margin-top: 50px;
+    padding-left: 20px;
+    color: #000000;
+    position: absolute; /*locks positon in place?*/
+    background: #ffffff;
+    margin-right: 400px;
+    margin-left: 20px;
+    box-shadow: 1px 1px;
+    padding-bottom: 10px;
+    box-shadow: 1px 1px 0px #999,
+    2px 2px 0px #999,
+    3px 3px 0px #999,
+    4px 4px 0px #999,
+    5px 5px 0px #999,
+    6px 6px 0px #999;
 }
 
+.component-box-carrot{
+    padding:30px;
+}
+
+.random-text-box{
+    padding-left: 5px;
+    padding-bottom:100px;
+    padding-top: 15px;
+    padding-left: 30px;
+    margin-left: 20px;
+    margin-right: 640px;
+    margin-top: 85px;
+    box-shadow: 1px 1px 0px #999,
+    2px 2px 0px #999,
+    3px 3px 0px #999,
+    4px 4px 0px #999,
+    5px 5px 0px #999,
+    6px 6px 0px #999;
+    font-size: 20px;
+    text-align: left;
+    
+}
