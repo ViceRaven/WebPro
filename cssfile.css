@@ -93,7 +93,10 @@ ul li:hover ul.dropdown { /*This class name means dropdown class items when hove
     padding-top: 15px;
     padding-left: 30px;
     margin-left: 20px;
-    margin-right: 640px;
+    margin-right: fixed;
+    position: auto; /* Change position to fixed */
+
+    box-sizing: border-box;
     margin-top: 85px;
     box-shadow: 1px 1px 0px #999,
     2px 2px 0px #999,
@@ -104,4 +107,4 @@ ul li:hover ul.dropdown { /*This class name means dropdown class items when hove
     font-size: 20px;
     text-align: left;
     
-}
+
