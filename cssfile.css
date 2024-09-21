@@ -85,8 +85,50 @@ ul li:hover ul.dropdown { /*This class name means dropdown class items when hove
     display: block;
     
 }
-
+/*
 .random-text-box{
+<<<<<<< HEAD
     width: 200px; /*Use width to keep the size of the box constant*/
     box-shadow: 0 .5em 1em -.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+=======
+    padding-left: 5px;
+    padding-bottom:100px;
+    padding-top: 15px;
+    padding-left: 30px;
+    margin-left: 20px;
+    margin-right: fixed;
+    position: auto; /* Change position to fixed 
+
+    box-sizing: border-box;
+    margin-top: 85px;
+    box-shadow: 1px 1px 0px #999,
+    2px 2px 0px #999,
+    3px 3px 0px #999,
+    4px 4px 0px #999,
+    5px 5px 0px #999,
+    6px 6px 0px #999;
+    font-size: 20px;
+    text-align: left;
+   
+>>>>>>> abee786bb81056c1ecea005b89666c0bd5d17c96
+}
+*/
+
+.card{
+    width: 15rem;
+    margin-top: 50px;
+    padding-left: 20px;
+    color: #000000;
+    position: absolute; /*locks positon in place?*/
+    background: #ffffff;
+    margin-right: 400px;
+    margin-left: 20px;
+    box-shadow: 1px 1px;
+    padding-bottom: 10px;
+    box-shadow: 1px 1px 0px #999,
+    2px 2px 0px #999,
+    3px 3px 0px #999,
+    4px 4px 0px #999,
+    5px 5px 0px #999,
+    6px 6px 0px #999;
 }
