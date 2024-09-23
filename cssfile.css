@@ -8,7 +8,7 @@
 /* Style the unordered lists */
 ul {
     list-style: none; 
-    background: #00ddc0; /* Set background color to green */
+
 }
 
 /* Style list items in the unordered list */
@@ -41,7 +41,7 @@ ul li ul.dropdown li {/*This class name means all list items inside dropdown cla
     
 }
 
-/* Style the dropdown menu */
+
 /* Style the dropdown menu */
 ul li ul.dropdown { /*This class name means dropdown class*/
     width: 300%; /* Set dropdown width */
@@ -50,7 +50,7 @@ ul li ul.dropdown { /*This class name means dropdown class*/
     display: none; /* Hide dropdown by default */
 }
 
-/* Change background color on hover of anchor tags */
+
 /* Change background color on hover of anchor tags */
 ul li a:hover {
     background: #0c0c0c; /* Dark blue background on hover */
@@ -87,10 +87,6 @@ ul li:hover ul.dropdown { /*This class name means dropdown class items when hove
 }
 /*
 .random-text-box{
-<<<<<<< HEAD
-    width: 200px; /*Use width to keep the size of the box constant*/
-    box-shadow: 0 .5em 1em -.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
-=======
     padding-left: 5px;
     padding-bottom:100px;
     padding-top: 15px;
@@ -110,25 +106,81 @@ ul li:hover ul.dropdown { /*This class name means dropdown class items when hove
     font-size: 20px;
     text-align: left;
    
->>>>>>> abee786bb81056c1ecea005b89666c0bd5d17c96
 }
 */
 
 .card{
-    width: 15rem;
-    margin-top: 50px;
-    padding-left: 20px;
+    width: 20rem;
+    margin-top: 4em;
+
     color: #000000;
     position: absolute; /*locks positon in place?*/
-    background: #ffffff;
-    margin-right: 400px;
-    margin-left: 20px;
+    color: #ffffff;
+    margin-right: 20rem;
+    margin-left: 15rem;
     box-shadow: 1px 1px;
-    padding-bottom: 10px;
-    box-shadow: 1px 1px 0px #999,
-    2px 2px 0px #999,
-    3px 3px 0px #999,
-    4px 4px 0px #999,
-    5px 5px 0px #999,
-    6px 6px 0px #999;
+    padding-bottom: 5rem;
+    box-shadow: 0 .5em 1em -.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+}
+
+.banner{
+    background-color: #00ddc0;
+}
+.card-header-title {
+    align-items: center;
+    color: #363636;
+    display: flex;
+    flex-grow: 1;
+    font-weight: 700;
+    padding: .1rem 1rem;
+}
+
+.card-header-icon {
+    align-items: center;
+    color: #363636;
+    display: flex;
+    padding: .75rem 1rem;
+}
+
+.card-header {
+    background-color: transparent;
+    align-items: stretch;
+    box-shadow: 0 .125em .25em rgba(10, 10, 10, .1);
+    display: flex;
+} 
+.content{
+    padding-top: 1em;
+    padding-left: 20px;
+    font-size: 18px;
+    color: black;
+}
+
+
+
+.card-footer-item{
+    align-items: center;
+    padding: .75rem 1rem;
+}
+
+
+
+.tabs.is-boxed {
+    width: 50em;
+    margin-left: 37em;
+    margin-top: 4em;
+    color: #fefefe ;
+    -webkit-overflow-scrolling: touch;
+    align-items: stretch;
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+   background-color:#fefefe;
+}
+
+
+.icon.is-small{
+    color: #000000;
 }
