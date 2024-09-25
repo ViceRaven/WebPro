@@ -184,3 +184,48 @@ ul li:hover ul.dropdown { /*This class name means dropdown class items when hove
 .icon.is-small{
     color: #000000;
 }
+
+body {
+    font-family: 'Arial', sans-serif; /* Switch to Arial for a modern look */
+    background-color: #f9f9f9; /* Light gray background for the whole page */
+    color: #333; /* Dark gray text color */
+    line-height: 1.6; /* Adjust line-height for better readability */
+}
+
+/* General button styling */
+button, .button {
+    background-color: #00c4b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .button:hover {
+    background-color: #00b3a4;
+}
+
+.tabs {
+    -webkit-overflow-scrolling: touch;
+    align-items: stretch;
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.input {
+    margin-left: 37em; /* Adjust this value as needed */
+    margin-top: 1em;
+    margin-right: 10em;
+    width: 10em; /* width of the input box */  
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 39em; /* Reduced padding-right */
+    padding-top: .5%;
+    padding-bottom: .5%;
+}
+
