@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "Web Process",
     "scripts": {
-        "start": "node index.js"
+        "start": "node server/index.mjs",
+        "dev": "nodemon server/index.mjs"
     },
     "dependencies": {
         "express": "^4.21.1",

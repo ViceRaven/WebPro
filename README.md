@@ -9,3 +9,16 @@ My cousin has been asking me for quite a while to help her build an e-commerce o
 
 I'm going through a very complicated time in my life especially with things at home. I find comfort in writing and building up my writing career. Focusing on school related things especially when it comes to coding (I recently fell out of love with coding but still try my best) it can be really difficult. All that I ask is that you don't lose faith in me.
 
+```
+Project name: … Client
+✔ Package name: … client
+✔ Add TypeScript? … No / _Yes
+✔ Add JSX Support? … No / _Yes
+✔ Add Vue Router for Single Page Application development? … No / _Yes
+✔ Add Pinia for state management? … No_ / Yes
+✔ Add Vitest for Unit Testing? … No_ / Yes
+✔ Add an End-to-End Testing Solution? › No_
+✔ Add ESLint for code quality? … No / _Yes
+✔ Add Prettier for code formatting? … No / _Yes
+✔ Add Vue DevTools 7 extension for debugging? (experimental) … No / _Yes
+```
