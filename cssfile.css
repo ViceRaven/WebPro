@@ -309,15 +309,17 @@ button:hover, .button:hover {
   top: 20px; /* Adjust top margin to ensure it's near the top */
   right: 20px; /* Ensure the ToC is aligned to the right side */
   z-index: 1000; /* Ensure it's above other elements */
+  display: flex;
 }
 
 .table-of-contents {
   width:30em;
   background-color: #ffffff;
-  flex: none;
+  display:flex;
   border-radius: 4px;
   position: absolute; /* Make the ToC sticky */
   top: 13em; /* Adjust top margin to ensure it's near the top */
+
 }
   
 .instructions {
@@ -499,6 +501,14 @@ input:invalid {
     margin-top: 5px;
   }
   
+.table-of-contents.box {
+  display: flex;
+}
+
+.title{
+  display: flex;
+}
+
 
   @media (max-width: 768px) {
     .container {
@@ -512,16 +522,29 @@ input:invalid {
   }
 
 
-  .menu-list {
-    
-    position: right;
-}
+  .menu-list li {
+    display: flex;
+    align-items: center; /* Add this line to vertically align the blue bar */
+    padding-bottom: 10%;
+  }
+
+  .title{
+    display:block;
+    margin-right: 10em;
+  }
+
+  /* Move the manage teams bar above */
+  .menu-list li:nth-child(2) {
+    order: -1;
+  }
+
+
 
 .menu-list a {
     border-radius: 2px;
     color: #4a4a4a;
-    display: block; /* Ensure each link is displayed as a block */
-    padding: .5em .75em;
+     /* Ensure each link is displayed as a block */
+  
 }
 
 .menu-list a:hover {
@@ -532,7 +555,9 @@ input:invalid {
 .menu-list a.is-active {
     background-color: #485fc7;
     color: #fff;
+    
 }
+
 
 .menu-list li ul {
     border-left: 1px solid #dbdbdb;
