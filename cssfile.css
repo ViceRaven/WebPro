@@ -311,24 +311,14 @@ button:hover, .button:hover {
   z-index: 1000; /* Ensure it's above other elements */
 }
 
-.sidebar h2 {
-  font-size: 18px;
-  margin-bottom: 15px;
+.table-of-contents {
+  width:30em;
+  background-color: #ffffff;
+  flex: none;
+  border-radius: 4px;
+  position: absolute; /* Make the ToC sticky */
+  top: 13em; /* Adjust top margin to ensure it's near the top */
 }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    color: #333;
-  }
   
 .instructions {
     background-color: #e0f7fa; /* Light teal background */
@@ -473,9 +463,14 @@ input:invalid {
   .table-of-contents {
     width: 30em;
     margin-left: 90em;
-    margin-bottom: 10%;
+    margin-bottom: 1000em;
   }
-  
+  /* Main container to hold content and sidebar */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
   button {
     padding: 10px 20px;
     background-color: #00d1b2;
@@ -517,65 +512,51 @@ input:invalid {
   }
 
 
-  .menu {
-    font-size: 1rem
-}
-
-.menu.is-small {
-    font-size: .75rem
-}
-
-.menu.is-medium {
-    font-size: 1.25rem
-}
-
-.menu.is-large {
-    font-size: 1.5rem
-}
-
-.menu-list {
-    line-height: 1.25
+  .menu-list {
+    
+    position: right;
 }
 
 .menu-list a {
     border-radius: 2px;
     color: #4a4a4a;
-    display: block;
-    padding: .5em .75em
+    display: block; /* Ensure each link is displayed as a block */
+    padding: .5em .75em;
 }
 
 .menu-list a:hover {
     background-color: #f5f5f5;
-    color: #363636
+    color: #363636;
 }
 
 .menu-list a.is-active {
     background-color: #485fc7;
-    color: #fff
+    color: #fff;
 }
 
 .menu-list li ul {
     border-left: 1px solid #dbdbdb;
     margin: .75em;
-    padding-left: .75em
+   
 }
 
 .menu-label {
     color: #7a7a7a;
     font-size: .75em;
     letter-spacing: .1em;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .menu-label:not(:first-child) {
-    margin-top: 1em
+    margin-top: 1em;
 }
 
 .menu-label:not(:last-child) {
-    margin-bottom: 1em
+    margin-bottom: .5em;
 }
 
 .title{
   display:block;
   margin-right: 10em;
 }
+
