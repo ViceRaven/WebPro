@@ -21,6 +21,8 @@ ul li { /*This class name means all list items inside the unordered list (CONTRO
     color: #000000; /* Set text color to BLACK */
 }
 
+
+
 /* Style anchor tags inside list items */
 ul li a {/*This class name means all a tags inside the list items*/
     display: block; /* Make anchor tags block-level */
@@ -42,19 +44,26 @@ ul li ul.dropdown li {/*This class name means all list items inside dropdown cla
 }
 
 
+
 /* Style the dropdown menu */
 ul li ul.dropdown { /*This class name means dropdown class*/
-    width: 300%; /* Set dropdown width */
-    background: #fefefe; /* Set background color */
-    position: absolute; /* Position dropdown absolutely */
-    display: none; /* Hide dropdown by default */
+  width: 10em; /* Set dropdown width */
+  background: #fefefe; /* Set background color */
+  position: absolute; /* Position dropdown absolutely */
+  display: none; /* Hide dropdown by default */
+  z-index: 1000; /* Ensure dropdown is above other elements */
+}
+
+/* Show the dropdown menu on hover of the parent list item */
+ul li:hover ul.dropdown, ul li ul.dropdown:hover { /* Ensure dropdown stays visible when hovering over it */
+  display: block; /* Show dropdown menu */
 }
 
 
 /* Change background color on hover of anchor tags */
 ul li a:hover {
     background: #0c0c0c; /* Dark blue background on hover */
-    opacity: 50%;
+    opacity: 100%;
     padding: 5px 5px; /* Ensure padding matches the non-hover state */
 }
 
@@ -290,17 +299,22 @@ button:hover, .button:hover {
   }
   
   /* Sidebar */
-  .sidebar {
-    width: 250px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-right: 1px solid #ccc;
-  }
-  
-  .sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
+  /* Ensure the ToC is in the upper-right corner */
+.sidebar {
+  width: 250px; /* Adjust width as needed */
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  position: fixed; /* Fix the ToC to the screen */
+  top: 20px; /* Adjust top margin to ensure it's near the top */
+  right: 20px; /* Ensure the ToC is aligned to the right side */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
   
   .sidebar ul {
     list-style-type: none;
@@ -419,20 +433,28 @@ input:invalid {
 }
 
 .form-section form {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
+  background-color: #fff;
+  width: 50em; /* Adjusted width to reel in the right side */
+  margin-left: 37em;
+  margin-right: auto; /* Changed to auto to adjust the right margin */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
   
   .form-group {
     margin-bottom: 15px;
-    margin-left:37em;
+    margin-left:1em;
   }
   
   .form-group label {
     display: block;
     margin-bottom: 5px;
+  }
+
+  .form-group select.subject {
+    display: block;
+    margin-bottom: 5px;
+    width: 20em; /* Adjust the width to make the select dropdown field shorter */
   }
   
   .form-group input[type="text"],
@@ -447,6 +469,11 @@ input:invalid {
   
   textarea {
     height: 100px;
+  }
+  .table-of-contents {
+    width: 30em;
+    margin-left: 90em;
+    margin-bottom: 10%;
   }
   
   button {
@@ -477,7 +504,7 @@ input:invalid {
     margin-top: 5px;
   }
   
-  /* Responsive */
+
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
@@ -487,3 +514,68 @@ input:invalid {
       width: 100%;
       margin-bottom: 20px;
     }
+  }
+
+
+  .menu {
+    font-size: 1rem
+}
+
+.menu.is-small {
+    font-size: .75rem
+}
+
+.menu.is-medium {
+    font-size: 1.25rem
+}
+
+.menu.is-large {
+    font-size: 1.5rem
+}
+
+.menu-list {
+    line-height: 1.25
+}
+
+.menu-list a {
+    border-radius: 2px;
+    color: #4a4a4a;
+    display: block;
+    padding: .5em .75em
+}
+
+.menu-list a:hover {
+    background-color: #f5f5f5;
+    color: #363636
+}
+
+.menu-list a.is-active {
+    background-color: #485fc7;
+    color: #fff
+}
+
+.menu-list li ul {
+    border-left: 1px solid #dbdbdb;
+    margin: .75em;
+    padding-left: .75em
+}
+
+.menu-label {
+    color: #7a7a7a;
+    font-size: .75em;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+.menu-label:not(:first-child) {
+    margin-top: 1em
+}
+
+.menu-label:not(:last-child) {
+    margin-bottom: 1em
+}
+
+.title{
+  display:block;
+  margin-right: 10em;
+}
