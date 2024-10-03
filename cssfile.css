@@ -326,7 +326,6 @@ button:hover, .button:hover {
     background-color: #e0f7fa; /* Light teal background */
     width: 50em;
     margin-left: 37em;
-    border-left: 5px solid #00d1b2; /* Green border on the left */
     border-radius: 8px;
     position: relative;
     margin-bottom: 20px;
@@ -338,9 +337,12 @@ button:hover, .button:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-  }
-  
-  .instruction-header h4 {
+    }
+    
+    .instruction-header h4 {
+    flex-grow:2; /* Allow the header to take up remaining space */
+    text-align: left; /* Align text to the left */
+
     margin: 0;
     font-size: 18px;
     font-weight: bold;
@@ -348,6 +350,7 @@ button:hover, .button:hover {
     background-color: #00d1b2;
     padding: 10px;
     border-radius: 5px 5px 0 0;
+    
   }
   
   .close-btn {
@@ -356,9 +359,7 @@ button:hover, .button:hover {
     color: white;
     font-size: 24px;
     cursor: pointer;
-    padding: 0 10px;
-    border-radius: 50%;
-    line-height: 0.75;
+    padding: 10.5px 20px;
   }
   
   .instructions p {
@@ -379,6 +380,7 @@ button:hover, .button:hover {
     border-radius: 5px;
     overflow: hidden;
     margin-top: 10px;
+    
   }
   
   .progress {
@@ -386,6 +388,7 @@ button:hover, .button:hover {
     background-color: #00d1b2;
     height: 100%;
     border-radius: 5px;
+    display: ;
   }
   
 .form-group {
@@ -521,11 +524,14 @@ input:invalid {
     }
   }
 
+  .menu-list{
+    line-height: .5;
+  }
 
   .menu-list li {
     display: flex;
     align-items: center; /* Add this line to vertically align the blue bar */
-    padding-bottom: 10%;
+    
   }
 
   .title{
@@ -533,11 +539,7 @@ input:invalid {
     margin-right: 10em;
   }
 
-  /* Move the manage teams bar above */
-  .menu-list li:nth-child(2) {
-    order: -1;
-  }
-
+  
 
 
 .menu-list a {
