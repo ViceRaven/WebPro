@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
+
+const isOpen = ref(false)
+</script>
 
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-info" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
         <img class="logo" alt="Vue logo" src="@/assets/logo.svg" width="30" height="30" />
@@ -11,7 +16,7 @@
           class="navbar-burger"
           aria-label="menu"
           aria-expanded="false"
-          data-target="navbarBasicExample"
+          :class="{ 'is-active': isOpen }"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -20,7 +25,7 @@
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-menu" :class="{ 'is-active': isOpen }" @click="isOpen = !isOpen">
         <div class="navbar-start">
           <RouterLink to="/" class="navbar-item">Home</RouterLink>
           <RouterLink to="/" class="navbar-item">About</RouterLink>
