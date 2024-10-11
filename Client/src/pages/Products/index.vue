@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { getAll, type Product } from '@/models/products'
+import ProductCard from '@/components/ProductCard.vue'
 
 const products = ref<Product[]>([])
-
 products.value = getAll().data
 </script>
 
 <template>
   <div class="shelf">
-    <h1>Products</h1>
+    <ProductCard v-for="product in products" :key="product.id" :product="product" />
   </div>
 </template>
 
@@ -19,5 +19,9 @@ products.value = getAll().data
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+}
+
+.shelf .box {
+  width: 300px;
 }
 </style>
