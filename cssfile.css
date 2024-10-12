@@ -505,7 +505,7 @@ input:invalid {
   }
   
 .table-of-contents.box {
-  display: flex;
+  display: flexbox;
 }
 
 .title{
