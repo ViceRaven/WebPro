@@ -1,16 +1,16 @@
 {
-    "name": "WEBPROCW",
-    "version": "1.0.0",
-    "description": "Web Process",
-    "scripts": {
-        "start": "node server/index.mjs",
-        "dev": "nodemon server/index.mjs"
-    },
-    "dependencies": {
-        "express": "^4.21.1",
-        "daysjs": "^1.11.13"
-    },
-    "devDependencies": {
-        "nodemon": "^3.1.7"
-    }
+  "name": "WEBPROCW",
+  "version": "1.0.0",
+  "description": "Web Process",
+  "scripts": {
+    "start": "node server/index.mjs",
+    "dev": "nodemon server/index.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }
