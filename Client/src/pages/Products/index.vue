@@ -1,8 +1,7 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { ref } from 'vue'
-import { getAll, type Product } from '../../models/products'
-import ProductCard from '../../components/ProductCard.vue'
+import { getAll, type Product } from '@/models/products'
+import ProductCard from '@/components/ProductCard.vue'
 
 const products = ref<Product[]>([])
 products.value = getAll().data
@@ -23,6 +22,7 @@ products.value = getAll().data
 }
 
 .shelf .box {
-  width: 300px;
+  width: 17rem;
+  flex-grow: 1;
 }
 </style>
