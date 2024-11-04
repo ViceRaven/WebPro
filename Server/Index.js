@@ -6,15 +6,22 @@ const app =
   express(); /* creates an insance of the express pipeline (everytime a message
 comes in to our port*/
 
-const PORT = 3000; /*this is the port that the server is listening to*/
+const PORT = 3001; /*this is the port that the server is listening to*/
 
-app.get("/", (req, res) => {
-  /* the slash means get without any path*/
-  res.send(
-    "Hello World"
-  ); /*this get function is registering a pipeline in the action 
+app
+  .get("/", (_, res) => {
+    /* the slash means get without any path*/
+    res.send(
+      "Hello World"
+    ); /*this get function is registering a pipeline in the action 
                                 of the get request (sends a string to the client)*/
-});
+  })
+  .get("/about", (_, res) => {
+    res.send("About us");
+  })
+  .use(("/users", userController) => {
+    res.send("About us");
+  })
 /*the second parameter is the object of all the methods we need to create a response*/
 
 app.listen(PORT, () => {

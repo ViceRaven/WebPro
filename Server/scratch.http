@@ -1,7 +1,10 @@
 # B"H
 
 ###
-https://dummyjson.com/products
+
+GET = https://google.com
+
+POST https://dummyjson.com/products
 MyHeader: MyValue
 
 {
@@ -10,3 +13,15 @@ MyHeader: MyValue
     "description": "A green lip stick for the bold and daring.",
     "image": "https://dummyimage.com/300x300.png/00ff00/ffffff"
 }
+
+###
+GET http://localhost:3001/contacts/ABOUT
+
+###
+GET http://localhost:3001/users
+
+###
+GET http://localhost:3001/users/30
+
+###
+GET http://localhost:3001/users/1
