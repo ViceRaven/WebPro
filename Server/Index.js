@@ -1,31 +1,27 @@
-/*
-B"H
-*/
+/*  B"H
+ */
 const express = require("express");
-const app =
-  express(); /* creates an insance of the express pipeline (everytime a message
-comes in to our port*/
+const app = express();
+const userController = require("./controllers/users");
+const productController = require("./controllers/products");
 
-const PORT = 3001; /*this is the port that the server is listening to*/
+const PORT = 3001;
 
+// Middleware
+app.use(express.json());
+app.use(express.static(__dirname + "/dist"));
+
+// Controllers
 app
-  .get("/", (_, res) => {
-    /* the slash means get without any path*/
-    res.send(
-      "Hello World"
-    ); /*this get function is registering a pipeline in the action 
-                                of the get request (sends a string to the client)*/
+  .get("/", (req, res) => {
+    res.send("Hello World");
   })
-  .get("/about", (_, res) => {
-    res.send("About us");
+  .get("/about", (req, res) => {
+    res.send("About Us");
   })
-  .use(("/users", userController) => {
-    res.send("About us");
-  })
-/*the second parameter is the object of all the methods we need to create a response*/
+  .use("/users", userController)
+  .use("/products", productController);
 
 app.listen(PORT, () => {
-  console.log(
-    "Server is running at http://localhost:" + PORT
-  ); /* if you have  anumber that will affect your code always set it as a constant */
-}); /*this is the port that the server is listening to*/
+  console.log("Server is running at http://localhost:" + PORT);
+});
