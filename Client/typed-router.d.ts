@@ -19,10 +19,10 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/About': RouteRecordInfo<'/About', '/About', Record<never, never>, Record<never, never>>,
-    '/admin/edit': RouteRecordInfo<'/admin/edit', '/admin/edit', Record<never, never>, Record<never, never>>,
-    '/admin/products': RouteRecordInfo<'/admin/products', '/admin/products', Record<never, never>, Record<never, never>>,
-    '/Contact/Index': RouteRecordInfo<'/Contact/Index', '/Contact/Index', Record<never, never>, Record<never, never>>,
-    '/HomeView': RouteRecordInfo<'/HomeView', '/HomeView', Record<never, never>, Record<never, never>>,
+    '/admin/Products/': RouteRecordInfo<'/admin/Products/', '/admin/Products', Record<never, never>, Record<never, never>>,
+    '/admin/Products/edit_[[id]]': RouteRecordInfo<'/admin/Products/edit_[[id]]', '/admin/Products/edit_:id?', { id?: ParamValueZeroOrOne<true> }, { id?: ParamValueZeroOrOne<false> }>,
+    '/Contact/': RouteRecordInfo<'/Contact/', '/Contact', Record<never, never>, Record<never, never>>,
+    '/Index': RouteRecordInfo<'/Index', '/Index', Record<never, never>, Record<never, never>>,
     '/Jobs': RouteRecordInfo<'/Jobs', '/Jobs', Record<never, never>, Record<never, never>>,
     '/Products/': RouteRecordInfo<'/Products/', '/Products', Record<never, never>, Record<never, never>>,
   }
