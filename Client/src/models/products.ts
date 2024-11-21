@@ -6,6 +6,10 @@ export async function getAll() {
   return rest<DataListEnvelope<Product>>('http://localhost:3000/api/v1/products')
 }
 
+export async function getById(id: number) {
+  return api<DataEnvelope<Product>>(`products/${id}`)
+}
+
 interface Review {
   rating: number
   comment: string
