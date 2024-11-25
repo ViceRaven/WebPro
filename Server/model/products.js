@@ -3,8 +3,9 @@
 
 /** @type {{ items: Product[] }} */
 const data = require("../data/products.json");
-const db = require("./supabase");
+const { getConnection } = require("./supabase");
 const conn = getConnection();
+
 /**
  * @template T
  * @typedef {import("../../Client/src/models/dataEnvelope").DataEnvelope} DataEnvelope
@@ -21,8 +22,6 @@ const conn = getConnection();
  */
 async function getAll() {
   const { data, error, count } = await conn
-    .from("products")
-    .select("*")
     .from("products")
     .select("*", { count: "estimated" });
   return {
@@ -66,11 +65,11 @@ async function add(user) {
  * @returns {Promise<DataEnvelope<Product>>}
  */
 async function update(id, user) {
-  const userToUpdate = get(id);
-  Object.assign(userToUpdate, user);
+  const userToUpdate = await get(id);
+  Object.assign(userToUpdate.data, user);
   return {
     isSuccess: true,
-    data: userToUpdate,
+    data: userToUpdate.data,
   };
 }
 
