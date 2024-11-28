@@ -3,9 +3,9 @@
 const express = require("express");
 const app = express();
 const userController = require("./controllers/users");
-const productController = require("./controllers/products");
+const exerciseController = require("./controllers/exercises");
 
-const PORT = 3001;
+const PORT = 3003;
 
 // Middleware
 app.use((req, res, next) => {
@@ -27,7 +27,7 @@ app
     res.send("About Us");
   })
   .use("/api/v1/users", userController)
-  .use("/api/v1/products", productController)
+  .use("/api/v1/exercises", exerciseController)
 
   .get("*", (req, res, next) => {
     res.sendFile(__dirname + "/dist/index.html");

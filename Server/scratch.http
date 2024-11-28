@@ -16,19 +16,19 @@ MyHeader: MyValue
 }
 
 ###
-GET http://localhost:3001/about
+GET http://localhost:3003/api/v1/exercises/6
 
 ###
-GET http://localhost:3001/users
+GET http://localhost:3003/api/vi/
 
 ###
-GET http://localhost:3001/users/30
+GET http://localhost:3001/users/2
 
 ###
-DELETE http://localhost:3001/users/1
+DELETE http://localhost:3003/api/v1/exercises/1
 
 ###
-POST http://localhost:3001/users
+POST http://localhost:3000/
 Content-Type: application/json
 
 {

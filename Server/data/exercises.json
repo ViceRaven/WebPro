@@ -1,0 +1,35 @@
+{
+    "exercises": [
+      {
+        "id": 1,
+        "title": "Push-up",
+        "description": "A basic upper body exercise that targets the chest, shoulders, and triceps.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 2,
+        "title": "Squat",
+        "description": "A fundamental lower body exercise that targets the quadriceps, hamstrings, and glutes.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 3,
+        "title": "Plank",
+        "description": "A core exercise that strengthens the abdominal muscles and lower back.",
+        "difficulty": "Hard"
+      },
+      {
+        "id": 4,
+        "title": "Lunge",
+        "description": "A lower body exercise that targets the quadriceps, hamstrings, and glutes.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 5,
+        "title": "Bicep Curl",
+        "description": "An upper body exercise that targets the biceps.",
+        "difficulty": "Easy"
+      }
+    ],
+    "total": 5
+  }
