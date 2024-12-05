@@ -1,6 +1,6 @@
 /*  B"H
  */
-const API_URL = 'http://localhost:3001/api/v1/'
+const API_URL = 'http://localhost:3004/api/v1/'
 
 export function rest<T>(url: string, data?: any, method?: string): Promise<T> {
   return fetch(url, {
@@ -14,4 +14,18 @@ export function rest<T>(url: string, data?: any, method?: string): Promise<T> {
 
 export function api<T>(url: string, data?: any, method?: string): Promise<T> {
   return rest<T>(API_URL + url, data, method)
+}
+
+export async function loadScript(url: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${url}"]`)) {
+      resolve()
+      return
+    }
+    const script = document.createElement('script')
+    script.src = url
+    script.onload = () => resolve()
+    script.onerror = (err) => reject(err)
+    document.head.appendChild(script)
+  })
 }

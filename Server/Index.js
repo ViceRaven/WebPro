@@ -5,7 +5,7 @@ const app = express();
 const userController = require("./controllers/users");
 const exerciseController = require("./controllers/exercises");
 
-const PORT = 3003;
+const PORT = 3004;
 
 // Middleware
 app.use((req, res, next) => {
